@@ -1,17 +1,17 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-//IMPORTING
+/* IMPORTING */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
-#include <starg.h>
+#include <stdarg.h>
 #include <unistd.h>
 
 
-//TYPES STRUCTURE
+/* TYPES STRUCTURE */
 
 /**
  * struct format - struct to find format to print text
@@ -26,7 +26,7 @@ typedef struct format
 	int (*f)(va_list);
 } format_in;
 
-//PROTOTYPES
+/* PROTOTYPES */
 
 int _printf(const char *format, ...);
 int (*def_type(char *format))(va_list);

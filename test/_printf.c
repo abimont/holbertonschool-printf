@@ -26,7 +26,29 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			
+			_putchar(format[i]);
+			len ++;
+			i++;
+			continue;	
+		}
+		else
+		{
+			if (format[i + 1] == '%')
+			{
+				_putchar('%');
+				counter++;
+				i += 2;
+				continue;
+			}
+			else
+			{
+				f = def_type(&format[i + 1]);
+				if (f == NULL)
+					return (-1);
+				i += 2;
+				counter += f(type_arg);
+				continue;
+			}
 		}
 	}
 	va_end(type_arg);
