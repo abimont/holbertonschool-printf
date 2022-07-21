@@ -11,7 +11,7 @@
 #include <unistd.h>
 
 
-/* TYPES STRUCTURE */
+/* STRUCTURE */
 
 /**
  * struct format - struct to find format to print text
@@ -29,10 +29,10 @@ typedef struct format
 /* PROTOTYPES */
 
 int _printf(const char *format, ...);
-int (*def_type(char *format))(va_list);
-_putchar(char c);
+int (*def_type(const char *format))(va_list);
 int print_c(va_list type_arg);
 int print_s(va_list type_arg);
 int identifier(va_list type_arg);
 
 #endif /* MAIN_H */
+

@@ -7,7 +7,7 @@
  * Return: function pointer
  */
 
-int (*def_type(char *format))(va_list)
+int (*def_type(const char *format))(va_list)
 {
 	format_in type[] = {
 		{"c", print_c},
@@ -18,12 +18,12 @@ int (*def_type(char *format))(va_list)
 	int i;
 
 	i = 0;
-	while (type[i].format != NULL)
+	while (type[i].c != NULL)
 	{
-		if (*(type[i].format) == *s)
+		if (type[i].c == *format)
 			return (type[i].f);
 		i++;
 	}
 
-	return (1);
+	return (NULL);
 }

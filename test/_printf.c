@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			_putchar(format[i]);
+			putchar(format[i]);
 			len ++;
 			i++;
 			continue;	
@@ -35,8 +35,8 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '%')
 			{
-				_putchar('%');
-				counter++;
+				putchar('%');
+				len++;
 				i += 2;
 				continue;
 			}
@@ -46,12 +46,12 @@ int _printf(const char *format, ...)
 				if (f == NULL)
 					return (-1);
 				i += 2;
-				counter += f(type_arg);
+				len += f(type_arg);
 				continue;
 			}
 		}
 	}
 	va_end(type_arg);
 
-	return (len)
+	return (len);
 }

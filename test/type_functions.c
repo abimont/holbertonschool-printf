@@ -15,7 +15,7 @@ int print_s(va_list type_arg)
 	if (str == NULL)
 		str = "(null)";
 	while (str[i])
-		_putchar(str[i++]);
+		putchar(str[i++]);
 	return (i);
 }
 
@@ -28,11 +28,11 @@ int print_s(va_list type_arg)
 
 int print_c(va_list type_arg)
 {
-	char character = va_arg(type_arg, char);
+	char character = va_arg(type_arg, int);
 
-	if (character == NULL)
+	if (!character)
 		character = "(null)";
-	_putchar(character);
+	putchar(character);
 
 	return (1);
 }
