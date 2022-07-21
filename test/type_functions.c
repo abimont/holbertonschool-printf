@@ -2,14 +2,14 @@
 
 /**
  * print_s - print a string
- * @s: string
+ * @type_arg: contains variable to print
  *
- * Return: i
+ * Return: number of characters printed
  */
 
-int print_s(va_list s)
+int print_s(va_list type_arg)
 {
-	char *str = va_arg(s, char *);
+	char *str = va_arg(type_arg, char *);
 	int i = 0;
 
 	if (str == NULL)
@@ -19,9 +19,16 @@ int print_s(va_list s)
 	return (i);
 }
 
-int print_c(va_list c)
+/**
+ * print_c - print a char
+ * @type_arg - contains variable to print
+ *
+ * Return: number of characters printed
+ */
+
+int print_c(va_list type_arg)
 {
-	char character = va_arg(s, char);
+	char character = va_arg(type_arg, char);
 
 	if (character == NULL)
 		character = "(null)";
@@ -29,3 +36,17 @@ int print_c(va_list c)
 
 	return (1);
 }
+
+/**
+ * identifier - type identification character
+ * @type_arg - contains variable to print
+ *
+ * Return: number of characters printed
+ */
+
+int identifier(va_list type_arg)
+{
+	(void)type_arg;
+	return (write(1, "%", 1));
+}
+
