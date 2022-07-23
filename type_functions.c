@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_s - print a string
+ * print_s - prints a string
  * @type_arg: contains variable to print
  *
  * Return: number of characters printed
@@ -20,7 +20,7 @@ int print_s(va_list type_arg)
 }
 
 /**
- * print_c - print a char
+ * print_c - prints a char
  * @type_arg: contains variable to print
  *
  * Return: number of characters printed
@@ -38,7 +38,7 @@ int print_c(va_list type_arg)
 }
 
 /**
- * print_di - print a base 10 integer
+ * print_di - prints a base 10 integer
  * @type_arg: contains variable to print
  *
  * Return: number of characters printed
