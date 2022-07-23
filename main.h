@@ -15,7 +15,6 @@
 
 /**
  * struct format - struct to find format to print text
- *
  * @c: format char
  * @f: function associated
  */
