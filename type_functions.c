@@ -38,7 +38,7 @@ int print_c(va_list type_arg)
 }
 
 /**
- * print_di - prints a base 10 integer
+ * print_di - prints a base integer
  * @type_arg: contains variable to print
  *
  * Return: number of characters printed
