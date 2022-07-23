@@ -1,0 +1,68 @@
+Produced by Abigail Montes Viana - Jhonatan Ramos Cavadia
+
+NAME:
+
+	_printf: Produces output according to a format.
+
+SYNOPSIS
+
+	#include <unistd.h>
+
+	typedef struct format
+	
+/* PROTOTYPES */
+
+	int _printf(const char *format, ...);
+	int (*def_type(const char *format))(va_list);
+	int print_c(va_list type_arg);
+	int print_s(va_list type_arg);
+	int identifier(va_list type_arg);
+	int print_di(va_list type_arg);
+	int _putchar(char c);
+
+DESCRIPTION:
+ 
+    Print a string according to FORMAT, or execute according to OPTION:
+
+The conversion specifier
+
+	A character that specifies the type of conversion to be applied.
+	The conversion specifiers and their meanings are:
+
+	c:	The char argument prints to the console the value of a variable that has a single character.
+
+	s:	The function is expected to get the string and print all the characters. 
+		The characters in the array are written up to a terminating null byte ('\0').
+
+	d, i:	The int argument is converted to decimal notation, computes the length of the digit, 
+		and writes it to the console.
+
+	%:	Typing a % does not convert any arguments, the full conversion specification is '%%'
+
+
+EXIT VALUES:
+
+	If the return is successful, the function returns the number 
+	of characters printed not including the null byte.
+
+	If an exit error is found, NULL is returned.
+
+EXAMPLE:
+
+	#include "main.h"
+
+	_printf("%c", 'S');
+
+BUGS
+
+    No bugs identified
+
+FILES
+
+	 _printf.c	_putchar.c	def_type.c	type_functions.c	main.h
+
+
+AUTHOR
+
+	Abigail Montes - https://github.com/abimont
+	Jhonatan Ramos - https://github.com/TATTANRAM0X
