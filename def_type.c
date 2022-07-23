@@ -11,7 +11,6 @@ int (*def_type(const char *format))(va_list)
 {
 	int i;
 
-	i = 0;
 	format_in type[] = {
 		{"c", print_c},
 		{"s", print_s},
@@ -21,6 +20,7 @@ int (*def_type(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
+	i = 0;
 	while (type[i].c != NULL)
 	{
 		if (*(type[i].c) == *format)
